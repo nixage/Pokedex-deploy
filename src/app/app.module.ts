@@ -11,8 +11,13 @@ import { PokeitemComponent } from './pokeitem/pokeitem.component';
 import { PokeComponent } from './poke/poke.component';
 
 import { HttpClientModule } from '@angular/common/http';
+
 import { ShowPokeInfoDirective } from './directive/show-poke-info.directive';
 import { HidePokeInfoDirective } from './directive/hide-poke-info.directive';
+
+import { FilterPipe } from './pipe/filter.pipe';
+
+import { FormsModule } from '@angular/forms'
 
 
 @NgModule({
@@ -27,13 +32,15 @@ import { HidePokeInfoDirective } from './directive/hide-poke-info.directive';
     PokeComponent,
 
     ShowPokeInfoDirective,
-    HidePokeInfoDirective
+    HidePokeInfoDirective,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

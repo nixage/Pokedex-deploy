@@ -1,17 +1,34 @@
 
 <div class="poke-list">
 
+    <div class="poke-list__input">
+        <div class="shown">
+            <input type="text" class="shown__input" placeholder=" " [(ngModel)]="searchType">
+            <div class="shown__label">Search by type</div>
+        </div>
+    </div>
+
     <div class="poke-list__row">
 
-        <div class="poke-list__collumn"  *ngFor="let pokemon of arrayPokemon">
+        <ng-container *ngIf="(arrayPokemon | filter : searchType) as result">
 
-            <div class="poke-list__item" appShowPokeInfo>
-
-                <app-pokeitem [pokemon]="pokemon"></app-pokeitem>
-                
+            <div class="poke-list__collumn"  *ngFor="let pokemon of result">
+    
+                <div class="poke-list__item" appShowPokeInfo>
+    
+                    <app-pokeitem [pokemon]="pokemon"></app-pokeitem>
+                    
+                </div>
+    
             </div>
 
-        </div>
+            <h1 class="poke-list__empty" *ngIf="!result?.length">
+                Result is null
+            </h1>
+
+        </ng-container>
+
+
 
     </div>
     <div class="poke-list__button">

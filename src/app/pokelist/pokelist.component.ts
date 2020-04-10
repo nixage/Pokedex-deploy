@@ -8,6 +8,8 @@ import { PokeService } from '../service/poke.service';
 })
 export class PokelistComponent implements OnInit {
 
+  searchType: string;
+
   arrayPokemon: Array<any> = [];
   limit: number = 0;
 
@@ -20,7 +22,6 @@ export class PokelistComponent implements OnInit {
   loadPokemon(){
     this.pokeService.getPokemon().subscribe( (pokemon:Array<any>) => {
       this.arrayPokemon.push(...pokemon)
-      console.log(this.arrayPokemon)
     })
   }
 

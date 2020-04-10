@@ -150,13 +150,14 @@ textarea.input{
 		border-radius: 0 !important;
 		width: 100%;
 		display: block;
+		color: #ffffff;
 		padding: 0px 0px 10px 10px;
-		border-bottom: 1px solid #989898;
+		border-bottom: 1px solid #ffffff;
 		background-color: transparent;
 		outline: none;
 		font-size: 18px;
 		&:focus:not(&-error){
-			border-bottom: 1px solid #4d4d4d;
+			border-bottom: 1px solid #bbbbbb;
 		}
 		&:focus ~ .shown__label, &:not(:placeholder-shown) ~ .shown__label{
 			top: -18px;
@@ -174,7 +175,7 @@ textarea.input{
 		top: 0px;
 		left: 10px;
 		font-size: 18px;
-		color: #000;
+		color: #ffffff;
 		pointer-events: none;
 		&-error{
 			color: #ff0000;

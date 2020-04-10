@@ -15,15 +15,8 @@ export class PokeinfoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // const pokemons = this.pokeService.arrayPokemons;
-    // this.activadetRoute.params.subscribe( data => {
-    //   this.pokemon = pokemons.filter( (val)=> data['id'] === val.name);
-    //   console.log(this.pokemon)
-    //   console.log(pokemons)
-    // })
     this.pokeService.pokeSubjet.subscribe( (pokemon) => {
       this.pokemon = pokemon
-      console.log(this.pokemon)
     })
   }
 

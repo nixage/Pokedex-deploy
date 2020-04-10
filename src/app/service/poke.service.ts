@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { map } from 'rxjs/operators';
-import { Observable, Subject, forkJoin } from 'rxjs';
+import { map, delay } from 'rxjs/operators';
+import { Observable, Subject, forkJoin, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +23,6 @@ export class PokeService {
   }
 
   getPokemonByid(id){
-    console.log(id)
     return this.http.get(`${this.baseUrl}/pokemon/${id}`)
   }
 
@@ -33,7 +32,6 @@ export class PokeService {
 
     for (let i = 0; i < 12; i++){
       allPokemonUrl.push(this.http.get(`${this.baseUrl}/pokemon/${this.pokeOffset + i + 1}`))
-      console.log(this.pokeOffset  + i + 1)
     }
     this.pokeOffset += 12
     return forkJoin(allPokemonUrl).pipe(
@@ -53,4 +51,5 @@ export class PokeService {
       })
     )
   }
+
 }
