@@ -1,0 +1,184 @@
+
+//<BUTTONS>====================================================================================================
+.btn{
+	display: inline-block;
+	padding: 10px 10px;
+	font-size: 16px;
+	font-weight: 700;
+	background-color: transparent;
+	color: #ffffff;
+	border: 1px solid #ffffff;
+	border-radius: 10px;
+	position: relative;
+	@include anim(0.3s,0s);
+	span{
+		position: relative;
+	}
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;left: 0;
+		width: 0;
+		height: 100%;
+		background-color: #ffffff;
+		border-radius: 8px;
+		@include anim(0.3s,0s);
+	}
+	&:hover{
+		color: #000000;
+		&::before{
+			width: 100%;
+		}
+	}
+	&.fw{width: 100%;}
+
+}
+
+.btn-type {
+	display: inline-block;
+	padding: 5px 5px;
+	font-size: 14px;
+	font-weight: 600;
+	background-color: transparent;
+	border-radius: 7px;
+	min-width: 70px;
+	text-align: center;
+	&-normal{
+		border: 1px solid #cf827f;
+		background: linear-gradient(#f7c7c5, #e16b66);
+	}
+	&-fighting{
+		border: 1px solid #e23c3c;
+		background: linear-gradient(#df6a6a, #e24747);
+	}
+	&-flying{
+		border: 1px solid #00aeff;
+		background: linear-gradient(#5dbce7, #1faef0);
+	}
+	&-poison{
+		border: 1px solid #088915;
+		background: linear-gradient(#02d413, #089e19);
+	}
+	&-ground{
+		border: 1px solid #4e4e4e;
+		background: linear-gradient(#999999, #5f5f5f);
+	}
+	&-rock{
+		border: 1px solid #38352e;
+		background: linear-gradient(#777267, #413e37);
+	}
+	
+	&-bug{
+		border: 1px solid #cf827f;
+		background: linear-gradient(#f7c7c5, #e16b66);
+	}
+	&-ghost{
+		border: 1px solid #5a5a5a;
+		background: linear-gradient(#a7a7a7, #616161);
+	}
+	&-fire{
+		border: 1px solid #ff0800;
+		background: linear-gradient(#ff6b66, #fc2820);
+	}
+	&-water{
+		border: 1px solid #003bfc;
+		background: linear-gradient(#4f77fa, #144bff);
+	}
+	&-grass{
+		border: 1px solid #00ff2a;
+		background: linear-gradient(#73fc8a, #1dfa42);
+	}
+	&-electric{
+		border: 1px solid #00c3ff;
+		background: linear-gradient(#5cd4f8, #16c6fc);
+	}
+
+	&-psychic{
+		border: 1px solid #cf827f;
+		background: linear-gradient(#f7c7c5, #e16b66);
+	}
+	&-ice{
+		border: 1px solid #0026ff;
+		background: linear-gradient(#3654fd, #0b2ffa);
+	}
+
+	&-dragon{
+		border: 1px solid #9e0500;
+		background: linear-gradient(#aa3a34, #990c07);
+	}
+	&-dark{
+		border: 1px solid #000000;
+		background: linear-gradient(#252525, #0e0e0e);
+	}
+
+	&-fairy{
+		border: 1px solid #ff5b55;
+		background: linear-gradient(#f5a5a3, #fa625d);
+	}
+	&-unknown{
+		border: 1px solid #ae00ff;
+		background: linear-gradient(#da89ff, #b31df8);
+	}
+	&-shadow{
+		border: 1px solid #c9c4b6;
+		background: linear-gradient(#d3d3d3, #cecbc2);
+	}
+}
+
+//</BUTTONS>====================================================================================================
+
+//<INPUT>====================================================================================================
+input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+.input{
+	border-radius: 0 !important;
+	width: 100%;
+	display: block;
+	padding: 0px 20px;
+	&.focus{}
+	&.err{}
+}
+textarea.input{
+	resize:none;
+	padding: 0px 0px;
+}
+//<INPUT>====================================================================================================
+
+//</INPUT>====================================================================================================
+.shown {
+	position: relative;
+	&__input {
+		border-radius: 0 !important;
+		width: 100%;
+		display: block;
+		padding: 0px 0px 10px 10px;
+		border-bottom: 1px solid #989898;
+		background-color: transparent;
+		outline: none;
+		font-size: 18px;
+		&:focus:not(&-error){
+			border-bottom: 1px solid #4d4d4d;
+		}
+		&:focus ~ .shown__label, &:not(:placeholder-shown) ~ .shown__label{
+			top: -18px;
+			font-size: 12px;
+			color: #4e4e4e;
+		}
+		&-error{
+			border-bottom: 1px solid #ff0000;
+		}
+	}
+	/* .shown__label */
+	&__label {
+		@include anim(0.3s,0s);
+		position: absolute;
+		top: 0px;
+		left: 10px;
+		font-size: 18px;
+		color: #000;
+		pointer-events: none;
+		&-error{
+			color: #ff0000;
+		}
+	}
+}
+//</INPUT>====================================================================================================

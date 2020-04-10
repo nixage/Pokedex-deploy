@@ -3,14 +3,37 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { PokeinfoComponent } from './pokeinfo/pokeinfo.component';
+import { PokelistComponent } from './pokelist/pokelist.component';
+import { PokeitemComponent } from './pokeitem/pokeitem.component';
+import { PokeComponent } from './poke/poke.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { ShowPokeInfoDirective } from './directive/show-poke-info.directive';
+import { HidePokeInfoDirective } from './directive/hide-poke-info.directive';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
+    HeaderComponent,
+    FooterComponent,
+    PokeinfoComponent,
+    PokelistComponent,
+    PokeitemComponent,
+    PokeComponent,
+
+    ShowPokeInfoDirective,
+    HidePokeInfoDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

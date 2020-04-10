@@ -1,0 +1,13 @@
+<div class="poke-item" (click)="showPokemonInfo()">
+    <div class="poke-item__body">
+        <div class="poke-item__image"><img src="{{ pokemon.image }}" alt=""></div>
+        <div class="poke-item__name">{{ pokemon.name }}</div>
+    </div>
+    <div class="poke-item__type" >
+        <button class="poke-item__button btn-type btn-type-f" *ngFor="let item of pokemon.type"
+                [ngClass]="'btn-type-'+item.type.name">
+            {{item.type.name}}
+        </button>
+    </div>
+</div>
+

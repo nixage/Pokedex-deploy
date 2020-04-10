@@ -1,0 +1,21 @@
+
+<div class="poke-list">
+
+    <div class="poke-list__row">
+
+        <div class="poke-list__collumn"  *ngFor="let pokemon of arrayPokemon">
+
+            <div class="poke-list__item" appShowPokeInfo>
+
+                <app-pokeitem [pokemon]="pokemon"></app-pokeitem>
+                
+            </div>
+
+        </div>
+
+    </div>
+    <div class="poke-list__button">
+        <button class="btn fw" (click)="loadPokemon()"><span>Load More</span></button>
+    </div>
+
+</div>

@@ -1,0 +1,58 @@
+@import "../../assets/css/mixin.scss";
+
+.poke-info {
+    box-shadow: 0px 0px 4px #ffffff;
+    padding: 10px;
+    position: relative;
+    &__close{
+        position: absolute;
+        right: 5px;top: -5px;
+        &::before{
+            content: "\d7";
+            font-size: 40px; 
+            color: #ffffff;
+            cursor: pointer;
+        }
+    }
+    &__image {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        font-size: 0;
+        justify-content: center;
+        align-self: center;
+        margin: 0px 0px 10px 0px;
+        img{
+            max-width: 100%;
+            width: 200px;
+            height: 200px;        
+        }
+    }
+
+    &__name {
+        font-size: 16px;
+        color: #ffffff;
+        text-align: center;
+        margin: 0px 0px 10px 0px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    &__table{
+        width: 100%;
+        text-align: center;  
+        border-collapse: collapse;
+        border: 1px solid #ffffff;  
+        th{
+            font-size: 16px;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 5px;
+        }
+        td{
+            font-size: 14px;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 5px;
+        }
+    }
+}
