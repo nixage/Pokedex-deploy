@@ -4,9 +4,8 @@ import { PokeComponent } from './poke/poke.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'poke', pathMatch: 'full'},
-  {path: 'poke', component: PokeComponent},
-  {path: '**', redirectTo: 'poke', pathMatch: 'full'}
+  {path: '', component: PokeComponent},
+  {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({
