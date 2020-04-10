@@ -13,3 +13,6 @@ If you want to build a site for production, follow these steps:
  `-` Run `ng build` to build the project. Use the `--prod` flag for a production build.  
 
  `-` Run `npm start` and then open http://localhost:3001 in your browser to view site  
+
+## Heroku 
+https://pokedex-1.herokuapp.com/poke
