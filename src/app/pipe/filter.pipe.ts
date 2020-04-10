@@ -10,7 +10,7 @@ export class FilterPipe implements PipeTransform {
   constructor(private pokeService: PokeService){}
 
   transform(value: any[], searchString: string): any[] {
-    const arr = this.pokeService.arrayPokemons[0];
+    const arr = this.pokeService.arrayPokemons;
 
     if (!value) {return null}
     if (!searchString){return value}

@@ -46,7 +46,7 @@ export class PokeService {
           }
           arrayPokemons.push(pokemon)
         })
-        this.arrayPokemons.push(arrayPokemons)
+        this.arrayPokemons.push(...arrayPokemons)
         return arrayPokemons
       })
     )
