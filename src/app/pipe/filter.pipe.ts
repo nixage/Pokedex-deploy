@@ -18,7 +18,7 @@ export class FilterPipe implements PipeTransform {
     let clearArray = []
     let filter = arr.filter( (val, idx) => {
       return val['type'].filter( value =>{
-        if (value.type.name.indexOf(searchString) != -1){
+        if (value.type.name.indexOf(searchString.toLowerCase()) != -1){
           clearArray.push(val)
         }
       })
